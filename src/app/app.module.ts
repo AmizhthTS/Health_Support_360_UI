@@ -9,7 +9,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppHttpInterceptor } from './AppHttpInterceptor';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { LoginModule } from './login/login.module';
 import { LayoutModule } from './layout/layout.module';
 import { ApiService } from './services/api.service';
 import { ValueService } from './services/value.service';
@@ -23,7 +22,6 @@ import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    LoginModule,
     LayoutModule,
     MaterialModule,
     HttpClientModule,
