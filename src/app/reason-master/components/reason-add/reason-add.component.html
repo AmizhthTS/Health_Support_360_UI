@@ -1,0 +1,22 @@
+<h2 mat-dialog-title><i class="far fa-file-alt"></i> Add Reason</h2>
+<mat-dialog-content class="mat-typography">
+    <div class="row">
+        <div class="col-12">
+            <form action="" [formGroup]="addForm">
+                <div class="form-row">
+                    <label for="">Name of the Reason <span class="text-danger">*</span></label>
+                    <textarea name="" id="" cols="30" rows="5" class="form-control" formControlName="reason"
+                        [ngClass]="{ 'is-invalid': add.reason.touched && add.reason.errors }"
+                        placeholder="Enter reason"></textarea>
+                    <div class="text-danger" *ngIf="add.reason.touched && add.reason.errors">
+                        <span *ngIf="add.reason.errors.required">Name of the Reason is required</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions class="mt-1 mb-1">
+    <button mat-raised-button (click)="cancelBtn()" class="mr-3">Cancel</button>
+    <button mat-raised-button color="accent" (click)="submitBtn()">Submit</button>
+</mat-dialog-actions>

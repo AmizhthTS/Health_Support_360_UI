@@ -1,0 +1,9 @@
+.login-container {
+    transform: translate(0%, 10%);
+}
+@media only screen and (max-width: 575px) {
+    .login-container {
+        transform: translate(0%, 0%);
+        padding: 15px 0px;
+    }
+}

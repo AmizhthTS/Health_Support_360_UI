@@ -1,0 +1,60 @@
+<!-- <main class="main-css">
+    <section class="side-section">
+        <div class="side-logo-div">
+            <img src="assets/images/health-logo.png" class="img-fluid side-logo" alt="">
+        </div>
+        <ul>
+            <li>
+                <i class="fas fa-home"></i>
+            </li>
+            <li class="active">
+                <i class="fas fa-user-friends"></i>
+            </li>
+        </ul>
+    </section>
+    <section class="main-section">
+        <router-outlet></router-outlet>
+    </section>
+</main> -->
+<div class="side-logo-div" id="navbar">
+    <img src="assets/images/health-logo.png" class="img-fluid side-logo" alt="" (click)="drawer.toggle()">
+</div>
+<mat-drawer-container>    
+    <mat-drawer #drawer mode="side" opened>
+        <section class="side-section">    
+            <div class="side-menu-logo">
+                <img src="assets/images/health-logo.png" class="img-fluid side-logo" alt="">
+            </div>        
+            <ul>
+                <li>
+                    <i class="fas fa-home"></i>
+                </li>
+                <li routerLink="/admin/customer" routerLinkActive="active">
+                    <i class="fas fa-user-friends"></i>
+                </li>
+                <li routerLink="/admin/document" routerLinkActive="active">
+                    <i class="far fa-file"></i>
+                </li>
+                <li routerLink="/admin/reason" routerLinkActive="active">
+                    <i class="far fa-file-alt"></i>
+                </li>
+            </ul>
+            <div class="profile-div">
+                <!-- [matMenuTriggerFor]="menu" -->
+                <img src="assets/images/profile.png"  class="img-fluid side-profile" alt="">                
+            </div>  
+            <mat-menu #menu="matMenu" yPosition="above">
+                <button mat-menu-item (click)="logoutBtn()">
+                    <mat-icon>logout</mat-icon>
+                    <span>Logout</span>
+                </button>
+              </mat-menu>          
+        </section>
+        
+    </mat-drawer>
+    <mat-drawer-content>
+        <section class="main-section">
+            <router-outlet></router-outlet>
+        </section>
+    </mat-drawer-content>
+</mat-drawer-container>

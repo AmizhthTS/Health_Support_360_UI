@@ -1,0 +1,94 @@
+<div class="main-section-div">
+    <div class="form-div">
+        <h6>ADD WORKSHOP</h6>
+        <form action="">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-data">
+                        <label for="">
+                            Workshop Name <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" name="" id="" class="form-control" placeholder="Enter Workshop Name">                                
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-data">
+                        <label for="">
+                            Date <span class="text-danger">*</span>
+                        </label>
+                        <input matInput readonly [matDatepicker]="picker" name="" id="" class="form-control"
+                            placeholder="MM/DD/YYYY">
+                        <mat-datepicker-toggle matSuffix [for]="picker">
+                        </mat-datepicker-toggle>
+                        <mat-datepicker [startAt]="date" #picker>
+                        </mat-datepicker>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-data">
+                        <label for="">
+                            Time - Hrs/Min <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" matInput [ngxTimepicker]="toggleTimepicker2"
+                        [disableClick]="true" readonly name="" id="" class="form-control" placeholder="Enter Time">
+                        <ngx-material-timepicker-toggle [for]="toggleTimepicker2" matSuffix>
+                        </ngx-material-timepicker-toggle>
+                        <ngx-material-timepicker #toggleTimepicker2></ngx-material-timepicker>
+                    </div>
+                </div>  
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-data">
+                        <label for="">
+                            Registration Fee <span class="text-danger">*</span>
+                        </label>
+                        <input type="number" name="" id="" class="form-control" placeholder="Enter Registration Fee">                                
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-data">
+                        <label for="">
+                            Medium of Meeting <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" name="" id="" class="form-control" placeholder="Enter Medium of Meeting">                                
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="form-data">
+                        <label for="">
+                            Description <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" name="" id="" class="form-control" placeholder="Enter Description">                                
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    
+                    <div class="form-data">  
+                        <label for="">
+                            Workshop Banner <span class="text-danger">*</span>
+                        </label>
+                        <div class="p-relative">
+                            <input type="file" class="d-none" name="" id="input-file-id">
+                            <label for="input-file-id" class="form-control">    
+                                Choose File   
+                                <span class="browse">Browse</span>                             
+                            </label> 
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mt-5">
+                    <button mat-raised-button color="accent">Upload Document</button>
+                </div>
+            </div>
+            <!-- <div class="mt-3">
+                <button class="add-btn">Upload Document</button>
+            </div> -->
+            <div class="mt-3">
+                <button mat-raised-button (click)="cancelBtn()" class="mr-3">Cancel</button>
+                <button mat-raised-button color="accent" (click)="submitBtn()">Submit</button>
+            </div>
+        </form>
+    </div>
+    
+   
+</div>

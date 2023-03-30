@@ -1,0 +1,14 @@
+.nav-link.active{
+    color: #66c313;
+    border-radius: 10px 10px 0px 0px;
+    
+}
+.nav-link{
+    padding: 15px 30px;
+}
+.nav-link:hover{
+    border-radius: 10px 10px 0px 0px;
+}
+form.form-tab-div {
+    padding: 25px 0px;
+}

@@ -1,0 +1,9 @@
+.profile-contant ul {
+    display: flex;
+}
+.profile-contant ul li {
+    width: 180px;
+}
+.profile-contant ul li.active span{
+    color: #e0128a;
+}

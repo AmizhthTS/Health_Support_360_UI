@@ -1,0 +1,149 @@
+<section class="login-section">
+    <div class="container">
+        <div class="login-container">
+            <div class="row">
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="login-div">
+                        <div class="login-title">
+                            <img src="assets/images/health-logo1.png" class="img-fluid logo-login" alt="">
+                            <h5>Register Now</h5>
+                        </div>
+                        <div class="login-form">
+                            <form action="" [formGroup]="addForm">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-6 col-xs-12">
+                                        <div class="form-data">
+                                            <label for="">
+                                                User Name <span class="text-danger">*</span>
+                                            </label>
+                                            <input type="text" class="form-control" placeholder="Enter User Name"
+                                                formControlName="username"
+                                                [ngClass]="{ 'is-invalid': add.username.touched && add.username.errors }"
+                                                name="" id="">
+                                            <div class="text-danger"
+                                                *ngIf="add.username.touched && add.username.errors">
+                                                <span *ngIf="add.username.errors.required">User Name is required</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-xs-12">
+                                        <div class="form-data">
+                                            <label for="">
+                                                Password <span class="text-danger">*</span>
+                                            </label>
+                                            <input [type]="showPassword ? 'text' : 'password'" matInput
+                                                class="form-control" placeholder="Enter Password" name=""
+                                                formControlName="password"
+                                                [ngClass]="{ 'is-invalid': add.password.touched && add.password.errors }"
+                                                id="">
+                                            <mat-icon matSuffix class="c-pointer" (click)="togglePasswordVisibility()">
+                                                {{showPassword?'visibility_off':'visibility'}}
+                                            </mat-icon>
+                                            <div class="text-danger"
+                                                *ngIf="add.password.touched && add.password.errors">
+                                                <span *ngIf="add.password.errors.required">Password is required</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6 col-xs-12">
+                                        <div class="form-data">
+                                            <label for="">
+                                                Confirm Password <span class="text-danger">*</span>
+                                            </label>
+                                            <input [type]="showConfirmPassword ? 'text' : 'password'" matInput
+                                                class="form-control" placeholder="Enter Confirm Password" name=""
+                                                formControlName="confirmPassword"
+                                                [ngClass]="{ 'is-invalid': add.confirmPassword.touched && add.confirmPassword.errors }"
+                                                id="">
+                                            <mat-icon matSuffix class="c-pointer" (click)="toggleconfirmPasswordVisibility()">
+                                                {{showConfirmPassword?'visibility_off':'visibility'}}
+                                            </mat-icon>
+                                            <div class="text-danger"
+                                                *ngIf="add.confirmPassword.touched && add.confirmPassword.errors">
+                                                <span *ngIf="add.confirmPassword.errors.required">Confirm Password is
+                                                    required</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-xs-12">
+                                        <div class="form-data">
+                                            <label for="">
+                                                Address <span class="text-danger">*</span>
+                                            </label>
+                                            <input type="text" class="form-control" placeholder="Enter Address" name=""
+                                                formControlName="address"
+                                                [ngClass]="{ 'is-invalid': add.address.touched && add.address.errors }"
+                                                id="">
+                                            <div class="text-danger" *ngIf="add.address.touched && add.address.errors">
+                                                <span *ngIf="add.address.errors.required">Address is required</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-xs-12">
+                                        <div class="form-data">
+                                            <label for="">
+                                                Country <span class="text-danger">*</span>
+                                            </label>
+                                            <select name="" class="form-control" id="" formControlName="country"
+                                                [ngClass]="{ 'is-invalid': add.country.touched && add.country.errors }">
+                                                <option value="" selected>Select Country</option>
+                                                <option value="India">India</option>
+                                            </select>
+                                            <div class="text-danger" *ngIf="add.country.touched && add.country.errors">
+                                                <span *ngIf="add.country.errors.required">Country is required</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-xs-12">
+                                        <div class="form-data">
+                                            <label for="">
+                                                Mobile Number <span class="text-danger">*</span>
+                                            </label>
+                                            <input type="number" class="form-control" placeholder="Enter Mobile Number"
+                                                name="" formControlName="mobileNumber"
+                                                [ngClass]="{ 'is-invalid': add.mobileNumber.touched && add.mobileNumber.errors }"
+                                                id="">
+                                            <div class="text-danger"
+                                                *ngIf="add.mobileNumber.touched && add.mobileNumber.errors">
+                                                <span *ngIf="add.mobileNumber.errors.required">Mobile Number is
+                                                    required</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6 col-xs-12">
+                                        <div class="form-data">
+                                            <label for="">
+                                                Email Id <span class="text-danger">*</span>
+                                            </label>
+                                            <input type="text" class="form-control" placeholder="Enter Email Id"
+                                                name="" formControlName="email"
+                                                [ngClass]="{ 'is-invalid': add.email.touched && add.email.errors }"
+                                                id="">
+                                            <div class="text-danger" *ngIf="add.email.touched && add.email.errors">
+                                                <span *ngIf="add.email.errors.required">Email Id is required</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </form>
+                            <div class="login-btn-div">
+                                <button class="login-btn" (click)="loginBtn()">Register</button>
+                            </div>
+                            <div class="mt-2 text-center">
+                                <a href="">Forgot Your password?</a>
+                                <p>Back to sign in? <a class="sign-up  c-pointer" (click)="signInBtn()">Sign In</a></p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>

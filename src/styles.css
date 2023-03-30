@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;    
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #66c313;
+    border-radius: 50px;
+}
+mat-datepicker-toggle.mat-datepicker-toggle {
+    position: absolute;
+    right: 0;
+    top: 30px;
+}
+ngx-material-timepicker-toggle{
+    position: absolute;
+    right: 5px;
+    top: 34px;
+}
+mat-icon.mat-icon.notranslate.c-pointer.material-icons.mat-icon-no-color{
+    position: absolute;
+    right: 5px;
+    top: 38px;
+    cursor: pointer;
+}

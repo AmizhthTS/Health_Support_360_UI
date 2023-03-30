@@ -1,0 +1,354 @@
+.p-relative {
+    position: relative;
+}
+.c-pointer{
+    cursor: pointer;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("/assets/images/down-toggle.png") white no-repeat 98.5% !important;
+    background: url("/assets/images/down-toggle.png") white no-repeat calc(100% - 10px) !important;
+}
+
+.filiter-div {
+    background: white;
+    padding: 15px;
+    margin-top: 25px;
+    border-radius: 15px;
+}
+
+.search-inp {
+    position: relative;
+    padding: 3px 0px;
+}
+
+.search-input {
+    padding: 10px 10px 10px 40px;
+    border-radius: 15px;
+    border: 1px solid gainsboro;
+    width: 100%;
+    outline: none;
+}
+
+.form-input {
+    padding: 10px 10px 10px 10px;
+    border-radius: 15px;
+    border: 1px solid gainsboro;
+    width: 100%;
+    outline: none;
+}
+
+.search-inp span {
+    position: absolute;
+    left: 11px;
+    font-size: 20px;
+    top: 12px;
+}
+
+button.add-btn {
+    padding: 15px 25px;
+    border: none;
+    background: #df0885;
+    border-radius: 15px;
+    color: white;
+    outline: none;
+}
+
+.title-div h5 {
+    color: #51514f;
+    text-transform: uppercase;
+    font-family: 'Blinker', sans-serif;
+}
+
+.title-div h5 i {
+    margin-right: 10px;
+}
+
+.main-section-div {
+    padding: 25px 0px;
+}
+
+/* login module css */
+section.login-section {
+    background: url('/assets/images/login-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.login-container {
+    transform: translate(0%, 12%);
+}
+
+.login-div {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 10px;
+}
+
+.login-title {
+    text-align: center;
+}
+
+img.img-fluid.logo-login {
+    width: 100px;
+}
+
+.login-btn-div {
+    text-align: center;
+}
+
+button.login-btn {
+    border: none;
+    padding: 10px;
+    margin-top: 25px;
+    width: 100%;
+    background: #e00885;
+    border-radius: 25px;
+    color: white;
+}
+
+a.sign-up {
+    font-size: 12px;
+}
+
+/* customer page css */
+.profile-details {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.profile-title {
+    display: flex;
+    border-bottom: 1px solid gainsboro;
+    padding-bottom: 5px;
+}
+
+.profile-i i {
+    padding: 10px 10px;
+    background: #f5ffe1;
+    font-size: 25px;
+    border-radius: 50px;
+    color: #66c313;
+}
+
+.profile-names {
+    padding: 5px 10px;
+}
+
+.profile-names h6 {
+    margin-bottom: 0;
+    color: #66c313;
+}
+
+.profile-names p {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #878786;
+}
+
+.profile-contant {
+    padding: 10px 0px;
+}
+
+.profile-contant ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.profile-contant ul li {
+    padding: 5px 0px;
+    cursor: pointer;
+}
+
+.profile-contant ul li i {
+    padding: 10px;
+    background: #fce6f3;
+    border-radius: 5px;
+    color: #e0128a;
+    width: 40px;
+    text-align: center;
+}
+
+.profile-contant ul li span {
+    padding: 0px 10px;
+    color: #51514fa6;
+    font-family: 'Blinker', sans-serif;
+}
+
+/* document page css */
+.document-details {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.document-title {
+    padding-bottom: 5px;
+}
+
+.document-names h5 {
+    color: #df0885;
+    margin-bottom: 0;
+}
+
+.document-names p {
+    margin-bottom: 0;
+    color: #878786;
+}
+
+.document-i i {
+    color: #878786;
+    padding: 9px 0px;
+    cursor: pointer;
+}
+
+.document-contant {
+    position: relative;
+    padding: 25px;
+    text-align: center;
+    color: #66c313;
+    cursor: pointer;
+}
+
+.docu-postion i {
+    font-size: 35px;
+}
+
+/* reason page css */
+.table-design {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.c-pink {
+    color: #e0128a;
+}
+
+/* document page css */
+.form-div {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+span.browse {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    padding: 6px;
+    background: #f8f8f8;
+    border-radius: 0px 5px 5px 0px;
+    border-left: 1px solid gainsboro;
+    cursor: pointer;
+}
+
+/* profile page css */
+.form-data {
+    margin: 15px 0px;
+    position: relative;
+}
+
+/* SCHEDULES page css */
+.document-i {
+    text-align: center;
+    margin: 5px 0px;
+}
+
+.schedule-p {
+    border-right: 1px solid gainsboro;
+}
+
+span.time-span {
+    background: #df0885;
+    color: white;
+    padding: 3px 15px;
+    border-radius: 25px;
+    font-size: 12px;
+    margin-left: 5px;
+    position: relative;
+    top: -1px;
+}
+
+span.day-span {
+    padding: 0px 10px;
+}
+
+p.mt-2.bb-1 {
+    border-bottom: 1px solid gainsboro;
+    padding-bottom: 15px;
+    color: #878786;
+}
+
+.pay-div h4 {
+    color: #66c313;
+}
+
+.buy-btn {
+    padding: 5px 20px;
+    border: none;
+    background: #df0885;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+    font-size: 16px;
+    margin-left: 15px;
+    position: relative;
+    top: -1px;
+}
+
+.form-div h6 {
+    color: #df0885;
+}
+
+.mat-checkbox {
+    margin-right: 15px;
+    font-family: Roboto, "Helvetica Neue", sans-serif !important;
+}
+
+/* workshop page css */
+.wokshop-img-div img {
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 575px) {
+    button.add-btn {
+        padding: 12px 20px;
+        margin-top: 15px;
+    }
+
+    .search-inp {
+        margin-top: 15px;
+    }
+
+    .profile-contant ul li span.hide-mob {
+        display: none;
+    }
+
+    .profile-contant ul li.active i {
+        padding: 10px;
+        background: #f5ffe1;
+        border-radius: 5px;
+        color: #66c313;
+        width: 40px;
+        text-align: center;
+    }
+
+    .title-div {
+        text-align: right;
+    }
+    .login-container {
+        transform: translate(0%, 0%);
+        padding: 15px 0px;
+    }
+}

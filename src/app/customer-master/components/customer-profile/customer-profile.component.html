@@ -1,0 +1,42 @@
+<div class="main-div">
+    <div class="container-fluid">
+        <div class="title-div">
+            <h5 *ngIf="titleName=='profile'"><i class="far fa-user"></i> Member's Health Profile</h5>
+            <h5 *ngIf="titleName=='notes'"><i class="fas fa-book-medical"></i> Member's Notes</h5>
+            <h5 *ngIf="titleName=='schedule'"><i class="far fa-clock"></i> Member's Schedules</h5>
+            <h5 *ngIf="titleName=='workshop'"><i class="fas fa-tv"></i> Member's Workshops</h5>
+        </div>
+        <div class="filiter-div">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="profile-title">
+                        <div class="profile-i">
+                            <i class="far fa-user"></i>
+                        </div>
+                        <div class="profile-names">
+                            <h6>John Stephan</h6>
+                            <p>Self</p>
+                        </div>
+                    </div>
+                    <div class="profile-contant">
+                        <ul>
+                            <li routerLink="/admin/customer/member/profile" routerLinkActive="active" (click)="getName('profile')">
+                                <i class="far fa-user"></i> <span class="hide-mob">Profile</span> 
+                            </li>
+                            <li routerLink="/admin/customer/member/notes" routerLinkActive="active" (click)="getName('notes')">
+                                <i class="fas fa-book-medical"></i> <span class="hide-mob">Notes</span> 
+                            </li>
+                            <li routerLink="/admin/customer/member/schedule" routerLinkActive="active" (click)="getName('schedule')"> 
+                                <i class="far fa-clock"></i> <span class="hide-mob">Schedules</span> 
+                            </li>
+                            <li routerLink="/admin/customer/member/workshop" routerLinkActive="active" (click)="getName('workshop')">
+                                <i class="fas fa-tv"></i> <span class="hide-mob">Workshops</span> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>                
+            </div>
+        </div>
+        <router-outlet></router-outlet>
+    </div>
+</div>
