@@ -1,3 +1,14 @@
+main.main-body {
+  background: #f5ffe1;
+  height: 100%;
+
+}
+.setCss {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .text-right.forget-pass a{
     font-size: 12px;
     color: #d39e00;

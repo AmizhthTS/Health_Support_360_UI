@@ -28,16 +28,18 @@ export class LoginPageComponent implements OnInit {
     var getform = this.loginForm.value
     if (this.loginForm.invalid) {
       this.loginForm.markAllAsTouched()
-      
+
     } else {
-      if (getform.email === 'admin@gmail.com') {
-        this.router.navigateByUrl('/admin')
-        sessionStorage.setItem('role','Admin')
-      } else {
-        alert('customer Login (: ')
-        this.router.navigateByUrl('/customer')
-        sessionStorage.setItem('role','Customer')
-      }
+      this.router.navigateByUrl('/admin')
+      sessionStorage.setItem('role', 'Admin')
+      // if (getform.email === 'admin@gmail.com') {
+      //   this.router.navigateByUrl('/admin')
+      //   sessionStorage.setItem('role','Admin')
+      // } else {
+      //   alert('customer Login (: ')
+      //   this.router.navigateByUrl('/customer')
+      //   sessionStorage.setItem('role','Customer')
+      // }
     }
   }
 }
