@@ -1,0 +1,54 @@
+<main class="main-body">
+
+  <div>
+
+
+    <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+      <div class="card auth maincard">
+        <div class="card-body auth-card">
+          <div class="auth-avatar" align="center">
+            <img src="assets/images/health-logo.png" class="img-fluid side-logo" alt="">
+            <h6>ADMIN LOGIN</h6>
+          </div>
+          <form [formGroup]="loginForm">
+            <div class="form-group">
+              <label for="email">Email : </label>
+              <input type="text" class="form-control" formControlName="email"
+                [ngClass]="{ 'is-invalid': add.email.touched && add.email.errors }" placeholder="Email" />
+              <div class="text-danger" *ngIf="add.email.touched && add.email.errors">
+                <span *ngIf="add.email.errors.required">Email Is is required</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password">Password : </label>
+              <input type="password" class="form-control" formControlName="password"
+                [ngClass]="{ 'is-invalid': add.password.touched && add.password.errors }" placeholder="********" />
+              <div class="text-danger" *ngIf="add.password.touched && add.password.errors">
+                <span *ngIf="add.password.errors.required">Password is required</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <input style="margin-top:5%;" type="checkbox" value="lsRememberMe" id="rememberMe"> <label
+                for="rememberMe">Remember me</label>
+              <div class="text-right forget-pass">
+                <a (click)="registerPage()">Forget Password ?</a>
+              </div>
+            </div>
+
+            <!-- <div *ngIf="invalidCredentials" style="color: red; margin-top: 10px;">
+                Invalid credentials. Please try again.
+              </div>
+              <div *ngIf="!invalidCredentials && email !== '' && password !== ''" style="color: green; margin-top: 10px;">
+                Welcome, {{ email }}!
+              </div> -->
+          </form>
+          <div class="text-center">
+            <button class="btn btn-danger" (click)="login()">Login</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>

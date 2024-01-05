@@ -29,19 +29,25 @@
                 <li>
                     <i class="fas fa-home"></i>
                 </li>
-                <li routerLink="/admin/customer" routerLinkActive="active">
+                <li *ngIf="role=='Customer'" routerLink="/customer" routerLinkActive="active">
                     <i class="fas fa-user-friends"></i>
                 </li>
-                <li routerLink="/admin/document" routerLinkActive="active">
+                <li *ngIf="role=='Admin'" routerLink="/admin/customer" routerLinkActive="active">
+                    <i class="fas fa-user-friends"></i>
+                </li>
+                <li *ngIf="role=='Admin'" routerLink="/admin/document" routerLinkActive="active">
                     <i class="far fa-file"></i>
                 </li>
-                <li routerLink="/admin/reason" routerLinkActive="active">
+                <li *ngIf="role=='Admin'" routerLink="/admin/reason" routerLinkActive="active">
                     <i class="far fa-file-alt"></i>
+                </li>
+                <li *ngIf="role=='Admin'" routerLink="/admin/workshop" routerLinkActive="active">
+                    <i class="fas fa-tv"></i>
                 </li>
             </ul>
             <div class="profile-div">
-                <!-- [matMenuTriggerFor]="menu" -->
-                <img src="assets/images/profile.png"  class="img-fluid side-profile" alt="">                
+                <!--  -->
+                <img src="assets/images/profile.png" [matMenuTriggerFor]="menu" class="img-fluid side-profile" alt="">                
             </div>  
             <mat-menu #menu="matMenu" yPosition="above">
                 <button mat-menu-item (click)="logoutBtn()">
