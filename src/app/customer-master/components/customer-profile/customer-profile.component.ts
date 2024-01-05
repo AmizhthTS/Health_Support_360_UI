@@ -11,7 +11,7 @@ export class CustomerProfileComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    var val = this.router.url.split('/')[4]
+    var val = this.router.url.split('/')[6]
     this.getName(val)
   }
   titleName = ''

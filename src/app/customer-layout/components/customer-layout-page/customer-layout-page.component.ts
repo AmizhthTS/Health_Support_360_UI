@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-layout-page',
-  templateUrl: './layout-page.component.html',
-  styleUrls: ['./layout-page.component.css']
+  selector: 'app-customer-layout-page',
+  templateUrl: './customer-layout-page.component.html',
+  styleUrls: ['./customer-layout-page.component.css']
 })
-export class LayoutPageComponent implements OnInit {
+export class CustomerLayoutPageComponent implements OnInit {
 
   role:any;
   constructor(private router: Router) { }

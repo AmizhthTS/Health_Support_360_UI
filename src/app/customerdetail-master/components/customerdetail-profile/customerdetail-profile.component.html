@@ -5,8 +5,8 @@
             <h5 *ngIf="titleName=='notes'"><i class="fas fa-book-medical"></i> Member's Notes</h5>
             <h5 *ngIf="titleName=='schedule'"><i class="far fa-clock"></i> Member's Schedules</h5>
             <h5 *ngIf="titleName=='workshop'"><i class="fas fa-tv"></i> Member's Workshops</h5>
-            <h5 *ngIf="titleName=='video'"><i class='far fa-file-video'></i> Member's Video</h5>
-            <h5 *ngIf="titleName=='document'"><i class="fas fa-book-medical"></i> Member's Document</h5>
+            <h5 *ngIf="titleName=='video'"><i class='far fa-file-video'></i> Member's Workshops</h5>
+            <h5 *ngIf="titleName=='document'"><i class="fas fa-book-medical"></i> Member's Workshops</h5>
         </div>
         <div class="filiter-div">
             <div class="row">
@@ -16,28 +16,28 @@
                             <i class="far fa-user"></i>
                         </div>
                         <div class="profile-names">
-                            <h6>John Stephan7</h6>
+                            <h6>John Stephan</h6>
                             <p>Self</p>
                         </div>
                     </div>
                     <div class="profile-contant">
                         <ul>
-                            <li routerLink="/admin/customer/member/profile" routerLinkActive="active" (click)="getName('profile')">
+                            <li routerLink="/coustemer/customer/member/profile" routerLinkActive="active" (click)="getName('profile')">
                                 <i class="far fa-user"></i> <span class="hide-mob">Profile</span> 
                             </li>
-                            <li routerLink="/admin/customer/member/notes" routerLinkActive="active" (click)="getName('notes')">
+                            <li routerLink="/coustemer/customer/member/notes" routerLinkActive="active" (click)="getName('notes')">
                                 <i class="fas fa-book-medical"></i> <span class="hide-mob">Notes</span> 
                             </li>
-                            <li routerLink="/admin/customer/member/schedule" routerLinkActive="active" (click)="getName('schedule')"> 
+                            <li routerLink="/coustemer/customer/member/schedule" routerLinkActive="active" (click)="getName('schedule')"> 
                                 <i class="far fa-clock"></i> <span class="hide-mob">Schedules</span> 
                             </li>
-                            <li routerLink="/admin/customer/member/workshop" routerLinkActive="active" (click)="getName('workshop')">
+                            <li routerLink="/coustemer/customer/member/workshop" routerLinkActive="active" (click)="getName('workshop')">
                                 <i class="fas fa-tv"></i> <span class="hide-mob">Workshops</span> 
                             </li>
-                            <li routerLink="/admin/customer/member/document" routerLinkActive="active" (click)="getName('document')">
+                            <li routerLink="/coustemer/customer/member/document" routerLinkActive="active" (click)="getName('document')">
                                 <i class="fas fa-book-medical"></i> <span class="hide-mob">document</span> 
                             </li>
-                            <li routerLink="/admin/customer/member/video" routerLinkActive="active" (click)="getName('video')">
+                            <li routerLink="/coustemer/customer/member/video" routerLinkActive="active" (click)="getName('video')">
                                 <i class="far fa-file-video"></i> <span class="hide-mob">Video</span> 
                             </li>
                         </ul>

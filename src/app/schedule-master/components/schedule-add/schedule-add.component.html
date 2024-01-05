@@ -1,0 +1,95 @@
+<div class="main-section-div">
+    <div class="form-div">
+        <h6>ADD SCHEDULE</h6>
+        <div class="row">            
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="form-data">
+                    <label for="">
+                        From Date <span class="text-danger">*</span>
+                    </label>
+                    <input matInput readonly [matDatepicker]="picker1" name="" id="" class="form-control"
+                        placeholder="MM/DD/YYYY">
+                    <mat-datepicker-toggle matSuffix [for]="picker1">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker [startAt]="date" #picker1>
+                    </mat-datepicker>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="form-data">
+                    <label for="">
+                        To Date <span class="text-danger">*</span>
+                    </label>
+                    <input matInput readonly [matDatepicker]="picker2" name="" id="" class="form-control"
+                        placeholder="MM/DD/YYYY">
+                    <mat-datepicker-toggle matSuffix [for]="picker2">
+                    </mat-datepicker-toggle>
+                    <mat-datepicker [startAt]="date" #picker2>
+                    </mat-datepicker>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="form-data">
+                    <label for="">
+                        Time - Hrs/Min <span class="text-danger">*</span>
+                    </label>
+                    <input type="text" matInput [ngxTimepicker]="toggleTimepicker2"
+                    [disableClick]="true" readonly name="" id="" class="form-control" placeholder="Enter Time">
+                    <ngx-material-timepicker-toggle [for]="toggleTimepicker2" matSuffix>
+                    </ngx-material-timepicker-toggle>
+                    <ngx-material-timepicker #toggleTimepicker2></ngx-material-timepicker>
+                </div>
+            </div>  
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="form-data">
+                    <label for="">
+                        Country <span class="text-danger">*</span>
+                    </label>
+                    <select name="" id="" class="form-control">
+                        <option value="" selected disabled>Select Country</option>
+                    </select>
+                </div>
+            </div>  
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="form-data">
+                    <label for="">
+                        Amount <span class="text-danger"></span>
+                    </label>
+                    <input type="number" name="" id="" class="form-control"
+                        placeholder="Enter Amount">
+                </div>
+            </div>        
+            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                <section class="form-data">
+                    <label for="">
+                       Days <span class="text-danger">*</span>
+                    </label> 
+                    <div class="mt-2">
+                      <mat-checkbox class="example-margin">SUN</mat-checkbox>
+                      <mat-checkbox class="example-margin"> MON</mat-checkbox>
+                      <mat-checkbox class="example-margin"> THU</mat-checkbox>
+                      <mat-checkbox class="example-margin"> WED</mat-checkbox>
+                      <mat-checkbox class="example-margin"> TUH</mat-checkbox>
+                      <mat-checkbox class="example-margin"> FRI</mat-checkbox>
+                      <mat-checkbox class="example-margin"> SAT</mat-checkbox>
+                    </div>
+                  </section>
+            </div>           
+            
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="form-data">
+                    <label for="">
+                        Description <span class="text-danger"></span>
+                    </label>
+                    <input type="text" name="" id="" class="form-control"
+                        placeholder="Enter Description">
+                </div>
+            </div>
+        </div>
+        <div class="mt-3">
+            <button mat-raised-button (click)="cancelBtn()" class="mr-3">Cancel</button>
+            <button mat-raised-button color="accent" (click)="submitBtn()">Submit</button>
+        </div>
+    
+    </div>
+</div>

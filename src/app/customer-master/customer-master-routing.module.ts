@@ -11,6 +11,11 @@ import { SchedulePageComponent } from './components/customer-profile/schedule-pa
 import { WorkshopAddComponent } from './components/customer-profile/workshop-page/workshop-add/workshop-add.component';
 import { WorkshopListComponent } from './components/customer-profile/workshop-page/workshop-list/workshop-list.component';
 import { WorkshopPageComponent } from './components/customer-profile/workshop-page/workshop-page.component';
+import { DocumentPageComponent } from './components/customer-profile/document-page/document-page.component';
+import { VideoPageComponent } from './components/customer-profile/video-page/video-page.component';
+// import { SheduleAddComponent } from '../shedule-master/components/shedule-add/shedule-add.component';
+// import { SheduleListComponent } from '../shedule-master/components/shedule-list/shedule-list.component';
+// import { ShedulePageComponent } from '../shedule-master/components/shedule-page/shedule-page.component';
 
 const routes: Routes = [
   {
@@ -28,6 +33,10 @@ const routes: Routes = [
           { path: '', redirectTo: 'profile', pathMatch: 'full' },
           { path: 'profile', component: ProfilePageComponent,data: { title: 'Profile' }},
           { path: 'notes', component: NotesPageComponent,data: { title: 'Notes' } },
+          { path: 'document', component: DocumentPageComponent,data: { title: 'Document' } },
+          { path: 'video', component: VideoPageComponent,data: { title: 'Video' } },
+          // { path: 'schedule', component: SchedulePageComponent,data: { title: 'Schedule' } },
+          
           {
             path: 'schedule', component: SchedulePageComponent,data: { title: 'Schedule' },
             children: [
@@ -36,6 +45,7 @@ const routes: Routes = [
               { path: 'add', component: ScheduleAddComponent,data: { title: 'Add' } }
             ]
           },
+         
           {
             path: 'workshop', component: WorkshopPageComponent,data: { title: 'Workshop' },
             children: [

@@ -18,9 +18,11 @@ import { WorkshopAddComponent } from './components/customer-profile/workshop-pag
 import { WorkshopListComponent } from './components/customer-profile/workshop-page/workshop-list/workshop-list.component';
 import { DatepickerModule, BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { DocumentPageComponent } from './components/customer-profile/document-page/document-page.component';
+import { VideoPageComponent } from './components/customer-profile/video-page/video-page.component';
 
 @NgModule({
-  declarations: [CustomerPageComponent, CustomerListComponent, CustomerProfileComponent, ProfilePageComponent, NotesPageComponent, SchedulePageComponent, WorkshopPageComponent, ScheduleListComponent, ScheduleAddComponent, WorkshopAddComponent, WorkshopListComponent],
+  declarations: [CustomerPageComponent, CustomerListComponent, CustomerProfileComponent, ProfilePageComponent, NotesPageComponent, SchedulePageComponent, WorkshopPageComponent, ScheduleListComponent, ScheduleAddComponent, WorkshopAddComponent, WorkshopListComponent, DocumentPageComponent, VideoPageComponent],
   imports: [
     CommonModule,
     CustomerMasterRoutingModule,
