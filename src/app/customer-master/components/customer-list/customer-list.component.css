@@ -3,3 +3,9 @@ table{
     
     /* border-radius: 5%; */
 }
+.table_section{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px gainsboro;
+}

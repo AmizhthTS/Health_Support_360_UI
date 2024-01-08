@@ -25,43 +25,25 @@
             <div class="side-menu-logo"> 
                 <img src="assets/images/health-logo.png" class="img-fluid side-logo" alt="">
             </div>        
-            <ul >
+            <ul *ngIf="role==='Customer'">
                 <li>
                     <i class="fas fa-home"></i>
                 </li>
-                <!-- <li routerLink="/customer" routerLinkActive="active">
+                <li routerLink="/customer" routerLinkActive="active">
                     <i class="fas fa-user-friends"></i>
-                </li> -->
-                <li  routerLink="/admin/customer" routerLinkActive="active">
-                    <i class="fas fa-user-friends"></i>
-                </li>
-                <li  routerLink="/admin/document" routerLinkActive="active">
-                    <i class="far fa-file"></i>
-                </li>
-                <li  routerLink="/admin/reason" routerLinkActive="active">
-                    <i class="far fa-file-alt"></i>
-                </li>
-                <li  routerLink="/admin/workshop" routerLinkActive="active">
-                    <i class="fas fa-tv"></i>
-                </li>
-                <li routerLink="/admin/schedule" routerLinkActive="active">
-                    <i class="far fa-clock"></i> 
                 </li>
             </ul>
             <ul *ngIf="role==='Admin'">
                 <li>
                     <i class="fas fa-home"></i>
-                </li>
-                <li *ngIf="role =='Admin'"  routerLink="/customer" routerLinkActive="active">
-                    <i class="fas fa-user-friends"></i>
-                </li>
+                </li>              
                 <li  routerLink="/admin/customer" routerLinkActive="active">
                     <i class="fas fa-user-friends"></i>
                 </li>
                 <li  routerLink="/admin/document" routerLinkActive="active">
                     <i class="far fa-file"></i>
                 </li>
-                <li  routerLink="/admin/reason" routerLinkActive="active">
+                <li  routerLink="/admin/consulting" routerLinkActive="active">
                     <i class="far fa-file-alt"></i>
                 </li>
                 <li  routerLink="/admin/workshop" routerLinkActive="active">

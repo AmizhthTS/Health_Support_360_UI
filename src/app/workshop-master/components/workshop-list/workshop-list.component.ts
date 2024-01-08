@@ -9,11 +9,19 @@ import { Router } from '@angular/router';
 export class WorkshopListComponent implements OnInit {
 
   constructor(private router:Router) { }
-
+  role:any
   ngOnInit(): void {
+    this.role=sessionStorage.getItem('role')
   }
+ 
   addPage(){
-    this.router.navigateByUrl('/admin/customer/member/workshop/add')
+    this.router.navigateByUrl('/admin/workshop/add')
+    // if(this.role=='Admin'){
+    //   this.router.navigateByUrl('/admin/customer/member/workshop/add')
+    // }else{
+    //   this.router.navigateByUrl('/admin/workshop/add')
+    // }
+   
   }
 }
 

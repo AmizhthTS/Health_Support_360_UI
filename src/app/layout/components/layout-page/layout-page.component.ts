@@ -8,10 +8,11 @@ import { Router } from '@angular/router';
 })
 export class LayoutPageComponent implements OnInit {
 
-  role:any;
-  constructor(private router: Router) { }
 
+  constructor(private router: Router) { }
+  role:any;
   ngOnInit(): void {
+    this.role=sessionStorage.getItem('role')
   }
   logoutBtn() {
     this.router.navigateByUrl('/login')

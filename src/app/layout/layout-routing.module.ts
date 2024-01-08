@@ -23,30 +23,30 @@ const routes: Routes = [
   // {
   //   path: 'customer', component: CustomerLayoutPageComponent, data: { title: 'Register' },
   // },
-  {
-    path: 'customer', component: CustomerLayoutPageComponent, data: { title: 'Customer' },
-    children: [
+  // {
+  //   path: 'customer', component: CustomerLayoutPageComponent, data: { title: 'Customer' },
+  //   children: [
     
-      {
-        path: 'customerdetail', loadChildren: '../customerdetail-master/customerdetail-master.module#CustomerdetailMasterModule', data: { title: 'Customerdetail' }
-      },
-      // {
-      //   path: 'customerlist', loadChildren: '../customerdetail-master/customerdetail-master.module#customerDetailMasterModule', data: { title: 'Customerdetail' }
-      // },
-      {
-        path: 'document', loadChildren: '../document-master/document-master.module#DocumentMasterModule', data: { title: 'Document' }
-      },
-      {
-        path: 'reason', loadChildren: '../reason-master/reason-master.module#ReasonMasterModule', data: { title: 'Reason' }
-      },
-      {
-        path: 'workshop', loadChildren: '../workshop-master/workshop-master.module#WorkshopMasterModule', data: { title: 'Workshop' }
-      },
-      {
-        path: 'schedule', loadChildren: '../schedule-master/schedule-master.module#ScheduleMasterModule', data: { title: 'schedule' }
-      },
-    ]
-  },
+  //     {
+  //       path: 'customerdetail', loadChildren: '../customerdetail-master/customerdetail-master.module#CustomerdetailMasterModule', data: { title: 'Customerdetail' }
+  //     },
+  //     {
+  //       path: 'customerlist', loadChildren: '../customerdetail-master/customerdetail-master.module#customerDetailMasterModule', data: { title: 'Customerdetail' }
+  //     },
+  //     {
+  //       path: 'document', loadChildren: '../document-master/document-master.module#DocumentMasterModule', data: { title: 'Document' }
+  //     },
+  //     {
+  //       path: 'reason', loadChildren: '../reason-master/reason-master.module#ReasonMasterModule', data: { title: 'Reason' }
+  //     },
+  //     {
+  //       path: 'workshop', loadChildren: '../workshop-master/workshop-master.module#WorkshopMasterModule', data: { title: 'Workshop' }
+  //     },
+  //     {
+  //       path: 'schedule', loadChildren: '../schedule-master/schedule-master.module#ScheduleMasterModule', data: { title: 'schedule' }
+  //     },
+  //   ]
+  // },
   {
     path: 'admin', component: LayoutPageComponent, data: { title: 'Health Support 360' },
     children: [
@@ -60,7 +60,7 @@ const routes: Routes = [
         path: 'document', loadChildren: '../document-master/document-master.module#DocumentMasterModule', data: { title: 'Document' }
       },
       {
-        path: 'reason', loadChildren: '../reason-master/reason-master.module#ReasonMasterModule', data: { title: 'Reason' }
+        path: 'consulting', loadChildren: '../reason-master/reason-master.module#ReasonMasterModule', data: { title: 'Reason' }
       },
       {
         path: 'workshop', loadChildren: '../workshop-master/workshop-master.module#WorkshopMasterModule', data: { title: 'Workshop' }
@@ -70,17 +70,17 @@ const routes: Routes = [
       },
     ]
   },
-  // {
-  //   path: 'customer', component: CustomerLayoutPageComponent, data: { title: 'Health Support 360' },
-  //   children: [
-  //     {
-  //       path: '', redirectTo: 'customer', pathMatch: 'full'
-  //     },
-  //     {
-  //       path: 'customer', loadChildren: '../customerdetail-master/customerdetail-master.module#CustomerDetailMasterModule', data: { title: 'Customer' }
-  //     },
-  //   ]
-  // }
+  {
+    path: 'customer', component: CustomerLayoutPageComponent, data: { title: 'Health Support 360' },
+    children: [
+      // {
+      //   path: '', redirectTo: '', pathMatch: 'full'
+      // },
+      {
+        path: '', loadChildren: '../customer-master/customer-master.module#CustomerMasterModule', data: { title: 'Customer' }
+      },
+    ]
+  }
   // {
   //   path: 'customer', component: CustomerLayoutPageComponent, data: { title: 'Health Support 360' },
     

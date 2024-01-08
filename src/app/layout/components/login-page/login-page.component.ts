@@ -30,16 +30,16 @@ export class LoginPageComponent implements OnInit {
       this.loginForm.markAllAsTouched()
 
     } else {
-      this.router.navigateByUrl('/admin')
-      sessionStorage.setItem('role', 'Admin')
-      // if (getform.email === 'admin@gmail.com') {
-      //   this.router.navigateByUrl('/admin')
-      //   sessionStorage.setItem('role','Admin')
-      // } else {
-      //   alert('customer Login (: ')
-      //   this.router.navigateByUrl('/customer')
-      //   sessionStorage.setItem('role','Customer')
-      // }
+      // this.router.navigateByUrl('/admin')
+      // sessionStorage.setItem('role', 'Admin')
+      if (getform.email === 'admin@gmail.com') {
+        this.router.navigateByUrl('/admin')
+        sessionStorage.setItem('role','Admin')
+      } else {
+        alert('customer Login (: ')
+        this.router.navigateByUrl('/customer')
+        sessionStorage.setItem('role','Customer')
+      }
     }
   }
 }

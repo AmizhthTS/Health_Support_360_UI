@@ -28,9 +28,9 @@ export class WorkshopAddComponent implements OnInit {
   ngOnInit(): void {
   }
   cancelBtn(){
-    this.router.navigateByUrl('/admin/customer/member/workshop/list')
+    this.router.navigateByUrl('/admin/workshop/list')
   }
   submitBtn(){
-    this.router.navigateByUrl('/admin/customer/member/workshop/list')
+    this.router.navigateByUrl('/admin/workshop/list')
   }
 }

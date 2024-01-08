@@ -8,16 +8,16 @@ export interface PeriodicElement {
   mobile: number;
   email: string;
   country: string;
-  icon:string;
+  icon: string;
 }
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name:'Jhone Stephen', email:'john.stephen@gmail.com', mobile:1234567899, country:'India',icon:'img'},
-  {position: 2, name:'Jhone Stephen', email:'john.stephen@gmail.com', mobile:1234567899, country:'India',icon:'img'},
-  {position: 3, name:'Jhone Stephen', email:'john.stephen@gmail.com', mobile:1234567899, country:'India',icon:'img'},
-  {position: 4, name:'Jhone Stephen', email:'john.stephen@gmail.com', mobile:1234567899, country:'India',icon:'img'},
-  {position: 5, name:'Jhone Stephen', email:'john.stephen@gmail.com', mobile:1234567899, country:'India',icon:'img'},
-  {position: 6, name:'Jhone Stephen', email:'john.stephen@gmail.com', mobile:1234567899, country:'India',icon:'img'},
- 
+  { position: 1, name: 'Jhone Stephen', email: 'john.stephen@gmail.com', mobile: 1234567899, country: 'India', icon: 'img' },
+  { position: 2, name: 'Jhone Stephen', email: 'john.stephen@gmail.com', mobile: 1234567899, country: 'India', icon: 'img' },
+  { position: 3, name: 'Jhone Stephen', email: 'john.stephen@gmail.com', mobile: 1234567899, country: 'India', icon: 'img' },
+  { position: 4, name: 'Jhone Stephen', email: 'john.stephen@gmail.com', mobile: 1234567899, country: 'India', icon: 'img' },
+  { position: 5, name: 'Jhone Stephen', email: 'john.stephen@gmail.com', mobile: 1234567899, country: 'India', icon: 'img' },
+  { position: 6, name: 'Jhone Stephen', email: 'john.stephen@gmail.com', mobile: 1234567899, country: 'India', icon: 'img' },
+
 ];
 @Component({
   selector: 'app-customer-list',
@@ -25,12 +25,20 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./customer-list.component.css']
 })
 export class CustomerListComponent implements OnInit {
+  dataSource = [
+    { position: 1, name: 'Jhone Stephen', email: 'john.stephen@gmail.com', mobile: 1234567899, country: 'India', icon: 'img' },
+    { position: 2, name: 'Jhone Stephen', email: 'john.stephen@gmail.com', mobile: 1234567899, country: 'India', icon: 'img' },
+    { position: 3, name: 'Jhone Stephen', email: 'john.stephen@gmail.com', mobile: 1234567899, country: 'India', icon: 'img' },
+    { position: 4, name: 'Jhone Stephen', email: 'john.stephen@gmail.com', mobile: 1234567899, country: 'India', icon: 'img' },
+    { position: 5, name: 'Jhone Stephen', email: 'john.stephen@gmail.com', mobile: 1234567899, country: 'India', icon: 'img' },
+    { position: 6, name: 'Jhone Stephen', email: 'john.stephen@gmail.com', mobile: 1234567899, country: 'India', icon: 'img' },
 
-  displayedColumns: string[] = ['position', 'name', 'mobile', 'email','country','addicon','editicon','deleteicon'];
-  dataSource = ELEMENT_DATA;
+  ];;
   constructor(private router: Router,) { }
 
+  role: any;
   ngOnInit(): void {
+    this.role = sessionStorage.getItem('role')
   }
   addProfile() {
     this.router.navigateByUrl('/admin/customer/member')
@@ -47,19 +55,16 @@ export class CustomerListComponent implements OnInit {
   wordEdit() {
     this.router.navigateByUrl('/admin/customer/member/workshop/list')
   }
-  profileEdit2()
-  {
+  profileEdit2() {
     this.router.navigateByUrl('/admin/customer/member/profile')
   }
-  documentEdit()
-  {
+  documentEdit() {
     this.router.navigateByUrl('/admin/customer/member/document')
   }
-  videoEdit()
-  {
+  videoEdit() {
     this.router.navigateByUrl('/admin/customer/member/video')
   }
-  login(){
+  login() {
     this.router.navigateByUrl('/auth/register-page/register-page')
   }
 }
