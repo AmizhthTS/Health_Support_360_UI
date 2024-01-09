@@ -10,7 +10,9 @@ export class CustomerProfileComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private router: Router) { }
 
+  role: any;
   ngOnInit(): void {
+    this.role = sessionStorage.getItem('role')
     var val = this.router.url.split('/')[4]
     this.getName(val)
     debugger

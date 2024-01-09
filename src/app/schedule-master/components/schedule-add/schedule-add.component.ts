@@ -28,9 +28,9 @@ export class ScheduleAddComponent implements OnInit {
   ngOnInit(): void {
   }
   cancelBtn(){
-    this.router.navigateByUrl('/admin/customer/member/schedule/list')
+    this.router.navigateByUrl('/admin/schedule/list')
   }
   submitBtn(){
-    this.router.navigateByUrl('/admin/customer/member/schedule/list')
+    this.router.navigateByUrl('/admin/schedule/list')
   }
 }

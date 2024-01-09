@@ -21,7 +21,7 @@
                         </div>
                     </div>
                     <div class="profile-contant">
-                        <ul>
+                        <ul *ngIf="role=='Admin'">
                             <li routerLink="/admin/customer/member/profile" routerLinkActive="active" (click)="getName('profile')">
                                 <i class="far fa-user"></i> <span class="hide-mob">Profile</span> 
                             </li>
@@ -31,15 +31,37 @@
                             <li routerLink="/admin/customer/member/schedule" routerLinkActive="active" (click)="getName('schedule')"> 
                                 <i class="far fa-clock"></i> <span class="hide-mob">Schedules</span> 
                             </li>
-                            <li routerLink="/admin/customer/member/workshop" routerLinkActive="active" (click)="getName('workshop')">
-                                <i class="fas fa-tv"></i> <span class="hide-mob">Workshops</span> 
-                            </li>
                             <li routerLink="/admin/customer/member/document" routerLinkActive="active" (click)="getName('document')">
-                                <i class="fas fa-book-medical"></i> <span class="hide-mob">document</span> 
+                                <i class="fas fa-book-medical"></i> <span class="hide-mob">Document</span> 
                             </li>
                             <li routerLink="/admin/customer/member/video" routerLinkActive="active" (click)="getName('video')">
                                 <i class="far fa-file-video"></i> <span class="hide-mob">Video</span> 
                             </li>
+                            <li routerLink="/admin/customer/member/workshop" routerLinkActive="active" (click)="getName('workshop')">
+                                <i class="fas fa-tv"></i> <span class="hide-mob">Workshops</span> 
+                            </li>
+                           
+                        </ul>
+                        <ul *ngIf="role=='Customer'">
+                            <li routerLink="/customer/member/profile" routerLinkActive="active" (click)="getName('profile')">
+                                <i class="far fa-user"></i> <span class="hide-mob">Profile</span> 
+                            </li>
+                            <li routerLink="/customer/member/notes" routerLinkActive="active" (click)="getName('notes')">
+                                <i class="fas fa-book-medical"></i> <span class="hide-mob">Notes</span> 
+                            </li>
+                            <li routerLink="/customer/member/schedule" routerLinkActive="active" (click)="getName('schedule')"> 
+                                <i class="far fa-clock"></i> <span class="hide-mob">Schedules</span> 
+                            </li>
+                            <li routerLink="/customer/member/document" routerLinkActive="active" (click)="getName('document')">
+                                <i class="fas fa-book-medical"></i> <span class="hide-mob">Document</span> 
+                            </li>
+                            <li routerLink="/customer/member/video" routerLinkActive="active" (click)="getName('video')">
+                                <i class="far fa-file-video"></i> <span class="hide-mob">Video</span> 
+                            </li>
+                            <li routerLink="/customer/member/workshop" routerLinkActive="active" (click)="getName('workshop')">
+                                <i class="fas fa-tv"></i> <span class="hide-mob">Workshops</span> 
+                            </li>
+                            
                         </ul>
                     </div>
                 </div>                

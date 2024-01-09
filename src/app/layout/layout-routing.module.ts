@@ -71,7 +71,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'customer', component: CustomerLayoutPageComponent, data: { title: 'Health Support 360' },
+    path: 'customer', component: LayoutPageComponent, data: { title: 'Health Support 360' },
     children: [
       // {
       //   path: '', redirectTo: '', pathMatch: 'full'

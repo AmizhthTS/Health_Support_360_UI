@@ -36,7 +36,7 @@ export class LoginPageComponent implements OnInit {
         this.router.navigateByUrl('/admin')
         sessionStorage.setItem('role','Admin')
       } else {
-        alert('customer Login (: ')
+        // alert('customer Login (: ')
         this.router.navigateByUrl('/customer')
         sessionStorage.setItem('role','Customer')
       }

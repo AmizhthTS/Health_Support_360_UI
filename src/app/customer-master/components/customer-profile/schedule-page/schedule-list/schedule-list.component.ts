@@ -10,7 +10,9 @@ export class ScheduleListComponent implements OnInit {
 
   constructor(private router: Router) { }
 
+  role: any;
   ngOnInit(): void {
+    this.role = sessionStorage.getItem('role')
   }
   addPage() {
     this.router.navigateByUrl('/admin/customer/member/schedule/add')

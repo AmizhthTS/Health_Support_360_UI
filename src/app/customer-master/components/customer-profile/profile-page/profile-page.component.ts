@@ -22,14 +22,25 @@ export const MY_DATE_FORMATS = {
 })
 export class ProfilePageComponent implements OnInit {
   date = new Date();
-  constructor(private router:Router) { }
+  constructor(private router: Router) { }
 
+  role: any;
   ngOnInit(): void {
+    this.role = sessionStorage.getItem('role')
   }
-  submitBtn(){
-    this.router.navigateByUrl('/admin/customer/list')
+  submitBtn() {
+    if (this.role == 'Admin') {
+      this.router.navigateByUrl('/admin/customer/list')
+    } else {
+      this.router.navigateByUrl('/customer/list')
+    }
+
   }
-  cancelBtn(){
-    this.router.navigateByUrl('/admin/customer/list')
+  cancelBtn() {
+    if (this.role == 'Admin') {
+      this.router.navigateByUrl('/admin/customer/list')
+    } else {
+      this.router.navigateByUrl('/customer/list')
+    }
   }
 }

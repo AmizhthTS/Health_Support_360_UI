@@ -18,7 +18,7 @@
                         <span><i class="fas fa-search"></i></span>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-2 col-4">
+                <div class="col-lg-4 col-md-2 col-4" *ngIf="role=='Admin'">
                     <div class="text-right">
                         <button class="add-btn" (click)="addPage()">
                             Add

@@ -41,30 +41,60 @@ export class CustomerListComponent implements OnInit {
     this.role = sessionStorage.getItem('role')
   }
   addProfile() {
-    this.router.navigateByUrl('/admin/customer/member')
+    if (this.role == 'Admin') {
+      this.router.navigateByUrl('/admin/customer/member')
+    } else {
+      this.router.navigateByUrl('/customer/member')
+    }
+
   }
   profileEdit() {
-    this.router.navigateByUrl('/admin/customer/member/profile')
+    if (this.role == 'Admin') {
+      this.router.navigateByUrl('/admin/customer/member/profile')
+    } else {
+      this.router.navigateByUrl('/customer/member/profile')
+    }
   }
   notesEdit() {
-    this.router.navigateByUrl('/admin/customer/member/notes')
+    if (this.role == 'Admin') {
+      this.router.navigateByUrl('/admin/customer/member/notes')
+    }else{
+      this.router.navigateByUrl('/customer/member/notes')
+    }
   }
   scheduleEdit() {
-    this.router.navigateByUrl('/admin/customer/member/schedule/list')
+    if (this.role == 'Admin') {
+      this.router.navigateByUrl('/admin/customer/member/schedule/list')
+    }else{
+      this.router.navigateByUrl('/customer/member/schedule/list')
+    }
   }
   wordEdit() {
-    this.router.navigateByUrl('/admin/customer/member/workshop/list')
+    if (this.role == 'Admin') {
+      this.router.navigateByUrl('/admin/customer/member/workshop/list')
+    }else{
+      this.router.navigateByUrl('/customer/member/workshop/list')
+    }
   }
   profileEdit2() {
-    this.router.navigateByUrl('/admin/customer/member/profile')
+    if (this.role == 'Admin') {
+      this.router.navigateByUrl('/admin/customer/member/profile')
+    }else{
+      this.router.navigateByUrl('/customer/member/profile')
+    }
   }
   documentEdit() {
-    this.router.navigateByUrl('/admin/customer/member/document')
+    if (this.role == 'Admin') {
+      this.router.navigateByUrl('/admin/customer/member/document')
+    }else{
+      this.router.navigateByUrl('/customer/member/document')
+    }
   }
   videoEdit() {
-    this.router.navigateByUrl('/admin/customer/member/video')
-  }
-  login() {
-    this.router.navigateByUrl('/auth/register-page/register-page')
+    if (this.role == 'Admin') {
+      this.router.navigateByUrl('/admin/customer/member/video')
+    }else{
+      this.router.navigateByUrl('/customer/member/video')
+    }
   }
 }

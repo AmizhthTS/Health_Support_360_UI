@@ -10,7 +10,9 @@ export class DocumentPageComponent implements OnInit {
 
   constructor(private router: Router) { }
 
+  role: any;
   ngOnInit(): void {
+    this.role = sessionStorage.getItem('role')
   }
   addPage() {
     this.router.navigateByUrl('/admin/document/add')
