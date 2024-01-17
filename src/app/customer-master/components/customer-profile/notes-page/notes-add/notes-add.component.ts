@@ -13,7 +13,7 @@ export class NotesAddComponent implements OnInit {
   ngOnInit(): void {
   }
   cancelBtn(){
-    this.router.navigateByUrl('/admin/document/list')
+    this.router.navigateByUrl('/admin/customer/member/notes/list')
   }
   submitBtn(){
     this.router.navigateByUrl('/admin/customer/member/notes')

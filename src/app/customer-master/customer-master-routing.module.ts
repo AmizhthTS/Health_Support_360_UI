@@ -15,6 +15,8 @@ import { DocumentPageComponent } from './components/customer-profile/document-pa
 import { VideoPageComponent } from './components/customer-profile/video-page/video-page.component';
 import { NotesListComponent } from './components/customer-profile/notes-page/notes-list/notes-list.component';
 import { NotesAddComponent } from './components/customer-profile/notes-page/notes-add/notes-add.component';
+import { DocumentListComponent } from './components/customer-profile/document-page/document-list/document-list.component';
+import { DocumentAddComponent } from './components/customer-profile/document-page/document-add/document-add.component';
 // import { NotesListComponent } from '../notes-master/components/notes-list/notes-list.component';
 // import { NotesAddComponent } from '../notes-master/components/notes-add/notes-add.component';
 // import { SheduleAddComponent } from '../shedule-master/components/shedule-add/shedule-add.component';
@@ -37,10 +39,17 @@ const routes: Routes = [
           { path: '', redirectTo: 'profile', pathMatch: 'full' },
           { path: 'profile', component: ProfilePageComponent,data: { title: 'Profile' }},
           // { path: 'notes', component: NotesPageComponent,data: { title: 'Notes' } },
-          { path: 'document', component: DocumentPageComponent,data: { title: 'Document' } },
+          
           { path: 'video', component: VideoPageComponent,data: { title: 'Video' } },
           // { path: 'schedule', component: SchedulePageComponent,data: { title: 'Schedule' } },
-          
+          {
+             path: 'document', component: DocumentPageComponent,data: { title: 'Document' },
+            children:[
+              {path:'', redirectTo:'list',pathMatch: 'full'},
+              { path: 'list', component: DocumentListComponent,data: { title: 'List' } },
+              { path: 'add', component: DocumentAddComponent,data: { title: 'Add' } }
+            ]
+            },
           {
             path: 'schedule', component: SchedulePageComponent,data: { title: 'Schedule' },
             children: [

@@ -12,13 +12,13 @@ import { CustomerLayoutPageComponent } from '../customer-layout/components/custo
 
 const routes: Routes = [
   {
-    path: '', component: LoginPageComponent, data: { title: 'Login' },
+    path: '', component: LoginPageComponent, data: { title: 'Health Support 360' },
   },
   {
-    path: 'register', component: RegisterPageComponent, data: { title: 'Register' },
+    path: 'register', component: RegisterPageComponent, data: { title: 'Health Support 360| Register' },
   },
   {
-    path: 'login', component: LoginPageComponent, data: { title: 'Register' },
+    path: 'login', component: LoginPageComponent, data: { title: ' Health Support 360 | Login' },
   },
   // {
   //   path: 'customer', component: CustomerLayoutPageComponent, data: { title: 'Register' },
