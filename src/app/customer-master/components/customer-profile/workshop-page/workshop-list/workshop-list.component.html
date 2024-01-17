@@ -6,13 +6,13 @@
                 <span><i class="fas fa-search"></i></span>
             </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 col-8">
+        <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-8">
             <div class="search-inp">
                 <select name="" id="" class="form-input">
                     <option value="" selected disabled>Filter Workshop</option>
                 </select>
             </div>
-        </div>
+        </div> -->
         <div class="col-lg-3 col-md-2 col-sm-6 col-4" *ngIf="role=='Admin'">
             <div class="text-right">
                 <button class="add-btn" (click)="addPage()">
@@ -33,9 +33,13 @@
                                 <h5>Yoga Workshop</h5>
                             </div>
                         </div>
-                        <div class="col-2">
+                        <div class="col-2" *ngIf="role=='Admin'">
                             <div class="document-i">
-                                <i class="fas fa-ellipsis-h"></i>
+                               <i class="fas fa-ellipsis-h" mat-button [matMenuTriggerFor]="menu"></i>
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item><span class="m-1"><i class='far fa-edit' style="color:green"></i> Edit</span></button>
+                                    <button mat-menu-item> <span class="m-1"><i class="fas fa-times-circle" style="color:red"></i></span> Delete</button>
+                                  </mat-menu>
                             </div>
                         </div>
                     </div>
@@ -68,9 +72,13 @@
                                 <h5>Yoga Workshop</h5>
                             </div>
                         </div>
-                        <div class="col-2">
+                        <div class="col-2" *ngIf="role=='Admin'">
                             <div class="document-i">
-                                <i class="fas fa-ellipsis-h"></i>
+                               <i class="fas fa-ellipsis-h" mat-button [matMenuTriggerFor]="menu"></i>
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item><span class="m-1"><i class='far fa-edit' style="color:green"></i> Edit</span></button>
+                                    <button mat-menu-item> <span class="m-1"><i class="fas fa-times-circle" style="color:red"></i></span> Delete</button>
+                                  </mat-menu>
                             </div>
                         </div>
                     </div>
@@ -103,9 +111,13 @@
                                 <h5>Yoga Workshop</h5>
                             </div>
                         </div>
-                        <div class="col-2">
+                        <div class="col-2" *ngIf="role=='Admin'">
                             <div class="document-i">
-                                <i class="fas fa-ellipsis-h"></i>
+                               <i class="fas fa-ellipsis-h" mat-button [matMenuTriggerFor]="menu"></i>
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item><span class="m-1"><i class='far fa-edit' style="color:green"></i> Edit</span></button>
+                                    <button mat-menu-item> <span class="m-1"><i class="fas fa-times-circle" style="color:red"></i></span> Delete</button>
+                                  </mat-menu>
                             </div>
                         </div>
                     </div>
@@ -138,9 +150,13 @@
                                 <h5>Yoga Workshop</h5>
                             </div>
                         </div>
-                        <div class="col-2">
+                        <div class="col-2" *ngIf="role=='Admin'">
                             <div class="document-i">
-                                <i class="fas fa-ellipsis-h"></i>
+                               <i class="fas fa-ellipsis-h" mat-button [matMenuTriggerFor]="menu"></i>
+                                <mat-menu #menu="matMenu">
+                                    <button mat-menu-item><span class="m-1"><i class='far fa-edit' style="color:green"></i> Edit</span></button>
+                                    <button mat-menu-item> <span class="m-1"><i class="fas fa-times-circle" style="color:red"></i></span> Delete</button>
+                                  </mat-menu>
                             </div>
                         </div>
                     </div>

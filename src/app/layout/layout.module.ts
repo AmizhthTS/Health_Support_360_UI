@@ -10,10 +10,11 @@ import { BsDatepickerModule, DatepickerModule } from 'ngx-bootstrap/datepicker';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { RegisterPageComponent } from './components/register-page/register-page.component';
+import { ResetpasswordPageComponent } from './components/resetpassword-page/resetpassword-page.component';
 
 
 @NgModule({
-  declarations: [LayoutPageComponent,LoginPageComponent,RegisterPageComponent],
+  declarations: [LayoutPageComponent,LoginPageComponent,RegisterPageComponent, ResetpasswordPageComponent],
   imports: [
     CommonModule,
     LayoutRoutingModule,

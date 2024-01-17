@@ -53,6 +53,9 @@ section.main-section {
     border-top: 1px solid gainsboro;
     background: white;
 }
+.fade {
+    z-index: 0;
+}
 
 @media only screen and (max-width: 575px) {
     .side-logo-div {

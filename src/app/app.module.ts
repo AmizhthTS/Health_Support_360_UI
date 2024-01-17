@@ -14,6 +14,10 @@ import { ApiService } from './services/api.service';
 import { ValueService } from './services/value.service';
 import { DatepickerModule, BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+// import "~bootstrap-icons/font/bootstrap-icons.css";
+
 @NgModule({
   declarations: [
     AppComponent
@@ -32,6 +36,7 @@ import { NgxMaterialTimepickerModule } from 'ngx-material-timepicker';
     BsDatepickerModule.forRoot(),
     DatepickerModule,
     NgxMaterialTimepickerModule,
+    MatButtonModule, MatMenuModule
   ],
   providers: [
     ApiService, ValueService,

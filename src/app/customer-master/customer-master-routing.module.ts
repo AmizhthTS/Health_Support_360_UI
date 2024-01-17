@@ -13,6 +13,10 @@ import { WorkshopListComponent } from './components/customer-profile/workshop-pa
 import { WorkshopPageComponent } from './components/customer-profile/workshop-page/workshop-page.component';
 import { DocumentPageComponent } from './components/customer-profile/document-page/document-page.component';
 import { VideoPageComponent } from './components/customer-profile/video-page/video-page.component';
+import { NotesListComponent } from './components/customer-profile/notes-page/notes-list/notes-list.component';
+import { NotesAddComponent } from './components/customer-profile/notes-page/notes-add/notes-add.component';
+// import { NotesListComponent } from '../notes-master/components/notes-list/notes-list.component';
+// import { NotesAddComponent } from '../notes-master/components/notes-add/notes-add.component';
 // import { SheduleAddComponent } from '../shedule-master/components/shedule-add/shedule-add.component';
 // import { SheduleListComponent } from '../shedule-master/components/shedule-list/shedule-list.component';
 // import { ShedulePageComponent } from '../shedule-master/components/shedule-page/shedule-page.component';
@@ -32,7 +36,7 @@ const routes: Routes = [
         children: [
           { path: '', redirectTo: 'profile', pathMatch: 'full' },
           { path: 'profile', component: ProfilePageComponent,data: { title: 'Profile' }},
-          { path: 'notes', component: NotesPageComponent,data: { title: 'Notes' } },
+          // { path: 'notes', component: NotesPageComponent,data: { title: 'Notes' } },
           { path: 'document', component: DocumentPageComponent,data: { title: 'Document' } },
           { path: 'video', component: VideoPageComponent,data: { title: 'Video' } },
           // { path: 'schedule', component: SchedulePageComponent,data: { title: 'Schedule' } },
@@ -43,6 +47,14 @@ const routes: Routes = [
               { path: '', redirectTo: 'list', pathMatch: 'full' },
               { path: 'list', component: ScheduleListComponent,data: { title: 'List' } },
               { path: 'add', component: ScheduleAddComponent,data: { title: 'Add' } }
+            ]
+          },
+          {
+            path: 'notes', component: NotesPageComponent,data: { title: 'Notes' },
+            children: [
+              { path: '', redirectTo: 'list', pathMatch: 'full' },
+              { path: 'list', component:  NotesListComponent,data: { title: 'List' } },
+              { path: 'add', component:  NotesAddComponent,data: { title: 'Add' } }
             ]
           },
          

@@ -1,7 +1,15 @@
 <div class="main-section-div">
     <div class="form-div">
         <h6>ADD SCHEDULE</h6>
-        <div class="row">            
+        <div class="row"> 
+            <div class="col-lg-12 col-md-4 col-sm-6 col-xs-12">
+                <div class="form-data">
+                    <label for="" style="width:40%;">Consulting for<span class="text-danger">*</span></label>
+                    <select name="" id="" class="form-control">
+                        <option value="" selected disabled>Select Consulting</option>
+                    </select>
+                </div>
+            </div>           
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="form-data">
                     <label for="">
@@ -31,7 +39,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="form-data">
                     <label for="">
-                        Time - Hrs/Min <span class="text-danger">*</span>
+                        Time  <span class="text-danger">*</span>
                     </label>
                     <input type="text" matInput [ngxTimepicker]="toggleTimepicker2"
                     [disableClick]="true" readonly name="" id="" class="form-control" placeholder="Enter Time">
@@ -40,6 +48,39 @@
                     <ngx-material-timepicker #toggleTimepicker2></ngx-material-timepicker>
                 </div>
             </div>  
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="form-data">
+                    <label for="" style="width:40%;">Time Zone<span class="text-danger">*</span></label>
+                    <select name="" id="" class="form-control">
+                        <option value="" selected >(GMT + 00:00) UTC</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="form-data">
+                    <label for="">
+                        Hrs/Min <span class="text-danger"></span>
+                    </label>
+                    <input type="number" name="" id="" class="form-control"
+                        placeholder="01:30">
+                </div>
+            </div>
+             <div class="col-lg-6    col-md-12 col-sm-12 col-xs-12">
+                <section class="form-data">
+                    <label for="">
+                       Days <span class="text-danger">*</span>
+                    </label> 
+                    <div class="mt-2">
+                      <mat-checkbox class="example-margin">SUN</mat-checkbox>
+                      <mat-checkbox class="example-margin"> MON</mat-checkbox>
+                      <mat-checkbox class="example-margin"> THU</mat-checkbox>
+                      <mat-checkbox class="example-margin"> WED</mat-checkbox>
+                      <mat-checkbox class="example-margin"> TUH</mat-checkbox>
+                      <mat-checkbox class="example-margin"> FRI</mat-checkbox>
+                      <mat-checkbox class="example-margin"> SAT</mat-checkbox>
+                    </div>
+                  </section>
+            </div>           
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <div class="form-data">
                     <label for="">
@@ -58,24 +99,7 @@
                     <input type="number" name="" id="" class="form-control"
                         placeholder="Enter Amount">
                 </div>
-            </div>        
-            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
-                <section class="form-data">
-                    <label for="">
-                       Days <span class="text-danger">*</span>
-                    </label> 
-                    <div class="mt-2">
-                      <mat-checkbox class="example-margin">SUN</mat-checkbox>
-                      <mat-checkbox class="example-margin"> MON</mat-checkbox>
-                      <mat-checkbox class="example-margin"> THU</mat-checkbox>
-                      <mat-checkbox class="example-margin"> WED</mat-checkbox>
-                      <mat-checkbox class="example-margin"> TUH</mat-checkbox>
-                      <mat-checkbox class="example-margin"> FRI</mat-checkbox>
-                      <mat-checkbox class="example-margin"> SAT</mat-checkbox>
-                    </div>
-                  </section>
-            </div>           
-            
+            </div>  
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="form-data">
                     <label for="">
@@ -87,8 +111,8 @@
             </div>
         </div>
         <div class="mt-3">
-            <button mat-raised-button (click)="cancelBtn()" class="mr-3">Cancel</button>
-            <button mat-raised-button color="accent" (click)="submitBtn()">Submit</button>
+            <!-- <button mat-raised-button (click)="cancelBtn()" class="mr-3">Cancel</button> -->
+            <button mat-raised-button color="accent" (click)="submitBtn()">Save</button>
         </div>
     
     </div>

@@ -157,6 +157,9 @@ a.sign-up {
 .profile-contant {
     padding: 10px 0px;
 }
+.profile-contant ul li span:hover{
+    cursor: pointer;
+}
 
 .profile-contant ul {
     padding-left: 0;
@@ -190,8 +193,11 @@ a.sign-up {
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 20px;
+   
 }
-
+.document-details:hover{
+    cursor: pointer;
+}
 .document-title {
     padding-bottom: 5px;
 }
@@ -204,6 +210,10 @@ a.sign-up {
 .document-names p {
     margin-bottom: 0;
     color: #878786;
+}
+.document-detail p
+{
+    color: black;
 }
 
 .document-i i {
@@ -223,7 +233,17 @@ a.sign-up {
 .docu-postion i {
     font-size: 35px;
 }
-
+.docu-icon{
+    margin-top: 3%;
+}
+.docu-icon i{
+    color:#66c313;
+    font-size: 35px;
+    margin-left:2%;
+}
+.docu-icon p{
+    color:#66c313
+}
 /* reason page css */
 .table-design {
     background: white;
@@ -316,11 +336,18 @@ p.mt-2.bb-1 {
     font-family: Roboto, "Helvetica Neue", sans-serif !important;
 }
 
+.content-body{
+    width: 60%;
+}
+
 /* workshop page css */
 .wokshop-img-div img {
     border-radius: 10px;
 }
-
+/* .table_section{
+    background-color:none;
+} */
+/* .document-details */
 @media only screen and (max-width: 575px) {
     button.add-btn {
         padding: 12px 20px;

@@ -73,7 +73,7 @@ export class CustomerListComponent implements OnInit {
     if (this.role == 'Admin') {
       this.router.navigateByUrl('/admin/customer/member/workshop/list')
     }else{
-      this.router.navigateByUrl('/customer/member/workshop/list')
+      this.router.navigateByUrl('/customer/member/workshop')
     }
   }
   profileEdit2() {

@@ -68,6 +68,9 @@ const routes: Routes = [
       {
         path: 'schedule', loadChildren: '../schedule-master/schedule-master.module#ScheduleMasterModule', data: { title: 'schedule' }
       },
+      {
+        path: 'notes', loadChildren: '../notes-master/notes-master.module#NotesMasterRoutingModule', data: { title: 'notes' }
+      },
     ]
   },
   {

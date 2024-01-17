@@ -8,7 +8,7 @@
                 <div class="col-lg-3 col-md-5 col-12">
                     <div class="search-inp">
                         <select name="" id="" class="form-input">
-                            <option value="" selected disabled>Filter by Reason</option>
+                            <option value="" selected disabled>Filter by Consulting</option>
                         </select>
                     </div>
                 </div>
@@ -35,13 +35,17 @@
                             <div class="row">
                                 <div class="col-10">
                                     <div class="document-names">
-                                        <h5>John Stephan</h5>
-                                        <p>Self</p>
+                                        <h5>Nutrition Training..</h5>
+                                        <p>Nutritional Coaching</p>
                                     </div>
                                 </div>
-                                <div class="col-2">
+                                <div class="col-2" *ngIf="role=='Admin'">
                                     <div class="document-i">
-                                        <i class="fas fa-ellipsis-h"></i>
+                                       <i class="fas fa-ellipsis-h" mat-button [matMenuTriggerFor]="menu"></i>
+                                        <mat-menu #menu="matMenu">
+                                            <button mat-menu-item><span class="m-1"><i class='far fa-edit' style="color:green"></i> Edit</span></button>
+                                            <button mat-menu-item> <span class="m-1"><i class="fas fa-times-circle" style="color:red"></i></span> Delete</button>
+                                          </mat-menu>
                                     </div>
                                 </div>
                             </div>
@@ -63,13 +67,17 @@
                             <div class="row">
                                 <div class="col-10">
                                     <div class="document-names">
-                                        <h5>John Stephan</h5>
-                                        <p>Self</p>
+                                        <h5>Top 10 Yoga pos..</h5>
+                                        <p>Yoga Training</p>
                                     </div>
                                 </div>
-                                <div class="col-2">
+                                <div class="col-2" *ngIf="role=='Admin'">
                                     <div class="document-i">
-                                        <i class="fas fa-ellipsis-h"></i>
+                                       <i class="fas fa-ellipsis-h" mat-button [matMenuTriggerFor]="menu"></i>
+                                        <mat-menu #menu="matMenu">
+                                            <button mat-menu-item><span class="m-1"><i class='far fa-edit' style="color:green"></i> Edit</span></button>
+                                            <button mat-menu-item> <span class="m-1"><i class="fas fa-times-circle" style="color:red"></i></span> Delete</button>
+                                          </mat-menu>
                                     </div>
                                 </div>
                             </div>
@@ -91,13 +99,17 @@
                             <div class="row">
                                 <div class="col-10">
                                     <div class="document-names">
-                                        <h5>John Stephan</h5>
-                                        <p>Self</p>
+                                        <h5>Yoga Theraphy... </h5>
+                                        <p>Yoga Theraphy</p>
                                     </div>
                                 </div>
-                                <div class="col-2">
+                                <div class="col-2" *ngIf="role=='Admin'">
                                     <div class="document-i">
-                                        <i class="fas fa-ellipsis-h"></i>
+                                       <i class="fas fa-ellipsis-h" mat-button [matMenuTriggerFor]="menu"></i>
+                                        <mat-menu #menu="matMenu">
+                                            <button mat-menu-item><span class="m-1"><i class='far fa-edit' style="color:green"></i> Edit</span></button>
+                                            <button mat-menu-item> <span class="m-1"><i class="fas fa-times-circle" style="color:red"></i></span> Delete</button>
+                                          </mat-menu>
                                     </div>
                                 </div>
                             </div>
@@ -119,13 +131,17 @@
                             <div class="row">
                                 <div class="col-10">
                                     <div class="document-names">
-                                        <h5>John Stephan</h5>
+                                        <h5>John Stephan..</h5>
                                         <p>Self</p>
                                     </div>
                                 </div>
-                                <div class="col-2">
+                                <div class="col-2" *ngIf="role=='Admin'">
                                     <div class="document-i">
-                                        <i class="fas fa-ellipsis-h"></i>
+                                       <i class="fas fa-ellipsis-h" mat-button [matMenuTriggerFor]="menu"></i>
+                                        <mat-menu #menu="matMenu">
+                                            <button mat-menu-item><span class="m-1"><i class='far fa-edit' style="color:green"></i> Edit</span></button>
+                                            <button mat-menu-item> <span class="m-1"><i class="fas fa-times-circle" style="color:red"></i></span> Delete</button>
+                                          </mat-menu>
                                     </div>
                                 </div>
                             </div>

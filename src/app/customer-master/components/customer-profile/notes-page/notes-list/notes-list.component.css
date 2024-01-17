@@ -1,0 +1,17 @@
+/* .collapse p{
+    color: black;
+} */
+p.detail {
+    color: #000000;
+    font-size: 20px;
+    font-weight:400;
+}
+
+span.name b {
+    color: #df0885;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.document-detail{
+    margin-top:2%;
+}

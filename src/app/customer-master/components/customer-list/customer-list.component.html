@@ -1,7 +1,7 @@
 <div class="main-div">
     <div class="container-fluid">
         <div class="title-div">
-            <h5><i class="fas fa-home"></i> <span *ngIf="role=='Customer'">Customer / Members List</span><span
+            <h5><i class="fas fa-user-friends"></i><span *ngIf="role=='Customer'">Customer / Members List</span><span
                     *ngIf="role=='Admin'">Members</span></h5>
         </div>
         <div class="filiter-div mb-4" *ngIf="role=='Customer'">
@@ -12,7 +12,7 @@
                         <span><i class="fas fa-search"></i></span>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-4">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-4" *ngIf="role==='Admin'">
                     <div class="text-right">
                         <button class="add-btn" (click)="addProfile()">
                             Add
@@ -45,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <div class="main-section-div table_section" *ngIf="role=='Admin'">
+        <div class="main-section-div table_section admin-table" *ngIf="role=='Admin'">
             <div class="table-respontive">
                 <table class="table">
                     <thead>
@@ -79,10 +79,10 @@
 
             </div>
         </div>
-        <div class="main-section-div table_section" *ngIf="role=='Customer'">
+        <div class="main-section-div " *ngIf="role=='Customer'">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="profile-details">
+                    <div class="profile-details card">
                         <div class="profile-title">
                             <div class="profile-i">
                                 <i class="far fa-user"></i>
@@ -95,104 +95,127 @@
                         <div class="profile-contant">
                             <ul>
                                 <li (click)="profileEdit()">
-                                    <i class="far fa-user"></i> <span>Profile</span>
+                                    <i class="far fa-user"></i> <span>Profile</span> 
                                 </li>
                                 <li (click)="notesEdit()">
-                                    <i class="fas fa-book-medical"></i> <span>Notes</span>
+                                    <i class="fas fa-book-medical"></i> <span>Notes</span> 
                                 </li>
                                 <li (click)="scheduleEdit()">
-                                    <i class="far fa-clock"></i> <span>Schedules</span>
+                                    <i class="far fa-clock"></i> <span>Schedules</span> 
+                                </li>
+                                <li (click)="documentEdit()">
+                                    <i class="far fa-file-alt"></i> <span>Document</span> 
+                                </li>
+                                <li (click)="videoEdit()">
+                                    <i class='far fa-file-video'></i> <span>Video</span> 
                                 </li>
                                 <li (click)="wordEdit()">
-                                    <i class="fas fa-tv"></i> <span>Workshops</span>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="profile-details">
-                        <div class="profile-title">
-                            <div class="profile-i">
-                                <i class="far fa-user"></i>
-                            </div>
-                            <div class="profile-names">
-                                <h6>John Stephan</h6>
-                                <p>Self</p>
-                            </div>
-                        </div>
-                        <div class="profile-contant">
-                            <ul>
-                                <li (click)="profileEdit()">
-                                    <i class="far fa-user"></i> <span>Profile</span>
-                                </li>
-                                <li (click)="notesEdit()">
-                                    <i class="fas fa-book-medical"></i> <span>Notes</span>
-                                </li>
-                                <li (click)="scheduleEdit()">
-                                    <i class="far fa-clock"></i> <span>Schedules</span>
-                                </li>
-                                <li (click)="wordEdit()">
-                                    <i class="fas fa-tv"></i> <span>Workshops</span>
+                                    <i class="fas fa-tv"></i> <span>Workshops</span> 
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="profile-details">
+                    <div class="profile-details card">
                         <div class="profile-title">
                             <div class="profile-i">
                                 <i class="far fa-user"></i>
                             </div>
                             <div class="profile-names">
-                                <h6>John Stephan</h6>
-                                <p>Self</p>
+                                <h6>Stephan William</h6>
+                                <p>Parent</p>
                             </div>
                         </div>
                         <div class="profile-contant">
                             <ul>
                                 <li (click)="profileEdit()">
-                                    <i class="far fa-user"></i> <span>Profile</span>
+                                    <i class="far fa-user"></i> <span>Profile</span> 
                                 </li>
                                 <li (click)="notesEdit()">
-                                    <i class="fas fa-book-medical"></i> <span>Notes</span>
+                                    <i class="fas fa-book-medical"></i> <span>Notes</span> 
                                 </li>
                                 <li (click)="scheduleEdit()">
-                                    <i class="far fa-clock"></i> <span>Schedules</span>
+                                    <i class="far fa-clock"></i> <span>Schedules</span> 
+                                </li>
+                                <li (click)="documentEdit()">
+                                    <i class="far fa-file-alt"></i> <span>Document</span> 
+                                </li>
+                                <li (click)="videoEdit()">
+                                    <i class='far fa-file-video'></i> <span>Video</span> 
                                 </li>
                                 <li (click)="wordEdit()">
-                                    <i class="fas fa-tv"></i> <span>Workshops</span>
+                                    <i class="fas fa-tv"></i> <span>Workshops</span> 
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="profile-details">
+                    <div class="profile-details card">
                         <div class="profile-title">
                             <div class="profile-i">
                                 <i class="far fa-user"></i>
                             </div>
                             <div class="profile-names">
-                                <h6>John Stephan</h6>
-                                <p>Self</p>
+                                <h6>Johana William</h6>
+                                <p>Child</p>
                             </div>
                         </div>
                         <div class="profile-contant">
                             <ul>
                                 <li (click)="profileEdit()">
-                                    <i class="far fa-user"></i> <span>Profile</span>
+                                    <i class="far fa-user"></i> <span>Profile</span> 
                                 </li>
                                 <li (click)="notesEdit()">
-                                    <i class="fas fa-book-medical"></i> <span>Notes</span>
+                                    <i class="fas fa-book-medical"></i> <span>Notes</span> 
                                 </li>
                                 <li (click)="scheduleEdit()">
-                                    <i class="far fa-clock"></i> <span>Schedules</span>
+                                    <i class="far fa-clock"></i> <span>Schedules</span> 
+                                </li>
+                                <li (click)="documentEdit()">
+                                    <i class="far fa-file-alt"></i> <span>Document</span> 
+                                </li>
+                                <li (click)="videoEdit()">
+                                    <i class='far fa-file-video'></i> <span>Video</span> 
                                 </li>
                                 <li (click)="wordEdit()">
-                                    <i class="fas fa-tv"></i> <span>Workshops</span>
+                                    <i class="fas fa-tv"></i> <span>Workshops</span> 
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="profile-details card">
+                        <div class="profile-title">
+                            <div class="profile-i">
+                                <i class="far fa-user"></i>
+                            </div>
+                            <div class="profile-names">
+                                <h6>Christina Stephan</h6>
+                                <p>Spouse</p>
+                            </div>
+                        </div>
+                        <div class="profile-contant">
+                            <ul>
+                                <li (click)="profileEdit()">
+                                    <i class="far fa-user"></i> <span>Profile</span> 
+                                </li>
+                                <li (click)="notesEdit()">
+                                    <i class="fas fa-book-medical"></i> <span>Notes</span> 
+                                </li>
+                                <li (click)="scheduleEdit()">
+                                    <i class="far fa-clock"></i> <span>Schedules</span> 
+                                </li>
+                                <li (click)="documentEdit()">
+                                    <i class="far fa-file-alt"></i> <span>Document</span> 
+                                </li>
+                                <li (click)="videoEdit()">
+                                    <i class='far fa-file-video'></i> <span>Video</span> 
+                                </li>
+                                <li (click)="wordEdit()">
+                                    <i class="fas fa-tv"></i> <span>Workshops</span> 
                                 </li>
                             </ul>
                         </div>
