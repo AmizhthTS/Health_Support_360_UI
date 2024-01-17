@@ -32,7 +32,7 @@ export class LoginPageComponent implements OnInit {
     } else {
       // this.router.navigateByUrl('/admin')
       // sessionStorage.setItem('role', 'Admin')
-      if (getform.email === 'admin@gmail.com') {
+      if (getform.email === 'admin') {
         this.router.navigateByUrl('/admin')
         sessionStorage.setItem('role','Admin')
       } else {

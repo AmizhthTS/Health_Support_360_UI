@@ -13,9 +13,12 @@ export class CustomerProfileComponent implements OnInit {
   role: any;
   ngOnInit(): void {
     this.role = sessionStorage.getItem('role')
-    var val = this.router.url.split('/')[4]
-    this.getName(val)
-    debugger
+    if(this.role=='Admin'){
+      var val = this.router.url.split('/')[4]
+    }else{
+      var val = this.router.url.split('/')[3]
+    } 
+    this.getName(val)    
   }
   titleName = ''
   getName(name) {
