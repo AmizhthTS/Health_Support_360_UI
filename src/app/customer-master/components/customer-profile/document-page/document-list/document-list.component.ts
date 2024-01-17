@@ -9,8 +9,9 @@ import { Router } from '@angular/router';
 export class DocumentListComponent implements OnInit {
 
   constructor(private router:Router) { }
-
+  role:any
   ngOnInit(): void {
+    this.role = sessionStorage.getItem('role')
   }
   addPage() {
     this.router.navigateByUrl('/admin/customer/member/document/add')
